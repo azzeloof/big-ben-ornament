@@ -1,7 +1,6 @@
 #include "EPD.h"
 #include "GUI_Paint.h"
-#include "ImageData.h"
-#include "EPD_SDCard.h"
+#include "face.h"
 
 void setup() {
   DEBUG("1.54inch e-Paper V2 demo\r\n");
@@ -9,22 +8,7 @@ void setup() {
   EPD_1IN54_V2_Init();
   EPD_1IN54_V2_Clear();
   DEV_Delay_ms(500);
-#if 0
-      /*show sd card pic*/
-    //1.Initialize the SD card
-    SDCard_Init();
-
-    //2.Create a new image cache named IMAGE_BW and fill it with white
-    Paint_NewImage(IMAGE_BW, EPD_1IN54_V2_WIDTH, EPD_1IN54_V2_HEIGHT, IMAGE_ROTATE_0, IMAGE_COLOR_POSITIVE);
-    Paint_Clear(WHITE);
-
-    //3.Read BMP pictures into RAM
-    SDCard_ReadBMP("1in54.bmp", 0, 0);
-
-    //4.Refresh the picture in RAM to e-Paper
-    EPD_1IN54_V2_Display();
-    DEV_Delay_ms(2000);
-#elif 1
+#if 1
     /*show image for array*/
     DEBUG("show image for array\r\n");
     //1.Create a new image cache named IMAGE_BW and fill it with white
@@ -33,7 +17,7 @@ void setup() {
     
     DEBUG("Paint_DrawBitMap\r\n");
     //2.show image for array, IMAGE_ROTATE_0 and IMAGE_COLOR_POSITIVE will not affect reading
-    Paint_DrawBitMap(IMAGE_DATA);
+    Paint_DrawBitMap(FACE);
 
     DEBUG("EPD_1IN54_Display\r\n");
     //3.Refresh the picture in RAM to e-Paper
@@ -42,7 +26,7 @@ void setup() {
 //    
 //      SPIRAM_Usertest();
 #endif
-
+/*
 #if 0
     //1.Create a new image cache named IMAGE_BW and fill it with white
     Paint_NewImage(IMAGE_BW, EPD_1IN54_V2_WIDTH, EPD_1IN54_V2_HEIGHT, IMAGE_ROTATE_90, IMAGE_COLOR_POSITIVE);
@@ -116,6 +100,7 @@ void setup() {
     EPD_1IN54_V2_Sleep();
     DEV_Module_Exit();
 }
+*/
 
 void loop() {
 
