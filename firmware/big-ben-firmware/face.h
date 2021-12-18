@@ -23,10 +23,10 @@
  * THE SOFTWARE.
  */
  
- #ifndef _IMAGEDATA_H_
-#define _IMAGEDATA_H_
+ #ifndef _FACE_H_
+#define _FACE_H_
 
-extern const unsigned char IMAGE_DATA[];
+extern const unsigned char FACE[];
 
 #endif
 /* FILE END */
