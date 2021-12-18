@@ -55,28 +55,10 @@ void setup() {
   pinMode(minutePin, INPUT);
   rtc.begin();
 
-  DEBUG("1.54inch e-Paper V2 demo\r\n");
   DEV_Module_Init();
   EPD_1IN54_V2_Init();
   EPD_1IN54_V2_Clear();
   DEV_Delay_ms(500);
-  /*
-  DEBUG("show image for array\r\n");
-  //1.Create a new image cache named IMAGE_BW and fill it with white
-  Paint_NewImage(IMAGE_BW, EPD_1IN54_V2_WIDTH, EPD_1IN54_V2_HEIGHT, IMAGE_ROTATE_0, IMAGE_COLOR_POSITIVE);
-  Paint_Clear(WHITE);   
-    
-  DEBUG("Paint_DrawBitMap\r\n");
-  //2.show image for array, IMAGE_ROTATE_0 and IMAGE_COLOR_POSITIVE will not affect reading
-  Paint_DrawBitMap(FACE);
-  drawHourHand(7);
-  drawMinuteHand(20);
-
-  DEBUG("EPD_1IN54_Display\r\n");
-  //3.Refresh the picture in RAM to e-Paper
-  EPD_1IN54_V2_Display();
-  DEV_Delay_ms(2000);
-  */
 }
 
 DateTime now;
