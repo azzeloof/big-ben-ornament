@@ -54,6 +54,7 @@ void setup() {
   pinMode(hourPin, INPUT);
   pinMode(minutePin, INPUT);
   rtc.begin();
+  //rtc.adjust(DateTime(2021, 12, 18, 9, 17, 0));
 
   DEV_Module_Init();
   EPD_1IN54_V2_Init();
