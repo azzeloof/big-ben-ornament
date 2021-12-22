@@ -12,5 +12,5 @@ To program the chips, I flashed the arduino bootloader onto the chip and used th
 ## Version History
 Release 1.0 will represent the bus ornaments as we initially made and distributed them. Once it is released, maybe we'll improve some stuff (but any hardware improvements will be untested).
 
-
-Warning- electricity creates heat, and excess heat around something like a Christmas tree can cause big problems. Use at your own risk! The designes here have been minimally tested and are absolutley not guarenteed to be safe.
+## Warning
+Electricity creates heat, and excess heat around something like a Christmas tree can cause big problems. Use at your own risk! The designs here have only been minimally tested and are absolutley not guarenteed to be safe.
