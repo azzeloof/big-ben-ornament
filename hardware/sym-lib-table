@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Big-Ben-Ornament-rescue)(type Legacy)(uri "${KIPRJMOD}/Big Ben Ornament-rescue.lib")(options "")(descr ""))
+)
